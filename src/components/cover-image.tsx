@@ -4,7 +4,7 @@ import { Link } from "@builder.io/qwik-city";
 interface CoverImageProps {
   title: string;
   url: string;
-  slug: string;
+  slug?: string;
 }
 export const CoverImage = component$(
   ({ title, url, slug }: CoverImageProps) => {
