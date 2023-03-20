@@ -1,8 +1,8 @@
-import DateComponent from "../components/date";
-import CoverImage from "../components/cover-image";
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { Avatar } from "./avatar";
+import { CoverImage } from "./cover-image";
+import { DateComponent } from "./date";
 
 export default component$(
   ({ title, coverImage, date, excerpt, author, slug }: any) => {
@@ -19,7 +19,7 @@ export default component$(
               </Link>
             </h3>
             <div class="mb-4 md:mb-0 text-lg">
-              <DateComponent dateString={date} />
+              <DateComponent date={date} />
             </div>
           </div>
           <div>
