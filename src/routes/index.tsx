@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import HeroPost from "~/components/hero-post";
+import { MoreStories } from "~/components/more-stories";
 import contentfulFetch from "~/lib/contentful-fetch";
 
 export default component$(() => {
@@ -9,16 +10,20 @@ export default component$(() => {
   const heroPost = posts?.length && posts[0];
   return (
     <div>
-      {heroPost && (
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-      )}
+      <section>
+        {heroPost && (
+          <HeroPost
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+          />
+        )}
+      </section>
+
+      <section>{posts.length > 0 && <MoreStories posts={posts} />}</section>
     </div>
   );
 });
