@@ -1,8 +1,8 @@
-import Avatar from "../components/avatar";
 import DateComponent from "../components/date";
 import CoverImage from "../components/cover-image";
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+import { Avatar } from "./avatar";
 
 export default component$(
   ({ title, coverImage, date, excerpt, author, slug }: any) => {
