@@ -22,7 +22,7 @@ export default component$(() => {
 
 export const getPost = routeLoader$(async ({ params, fail }) => {
   const query = `query {
-    postCollection(where:{slug:"mobile-otp-based-authentication-and-authorization-api-using-nodejs-and"}) {
+    postCollection(where:{slug:"${params.slug}"}) {
      items {
       title
       coverImage {
