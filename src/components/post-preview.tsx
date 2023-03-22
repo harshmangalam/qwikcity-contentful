@@ -26,7 +26,7 @@ export const PostPreview = component$(
         <CoverImage title={title} slug={slug} url={coverImage.url} />
       </div>
       <h3 class="text-3xl mb-3 leading-snug">
-        <Link href={`/posts/${slug}`} class="hover:underline">
+        <Link href={`/${slug}`} class="hover:underline">
           {title}
         </Link>
       </h3>

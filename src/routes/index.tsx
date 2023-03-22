@@ -50,7 +50,6 @@ export const getPosts = routeLoader$(async ({ fail }) => {
     if (response.ok) {
       return data.data.postCollection;
     }
-    console.log(data);
     return fail(response.status, {
       message: response.statusText,
     });

@@ -22,9 +22,11 @@ export const PostHeader = component$(
       <div class="hidden md:block md:mb-12">
         {author && <Avatar name={author.name} picture={author.picture} />}
       </div>
-      <div class="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} url={coverImage.url} />
-      </div>
+      {coverImage && (
+        <div class="mb-8 md:mb-16 sm:mx-0">
+          <CoverImage title={title} url={coverImage.url} />
+        </div>
+      )}
       <div class="max-w-2xl mx-auto">
         <div class="block md:hidden mb-6">
           {author && <Avatar name={author.name} picture={author.picture} />}
